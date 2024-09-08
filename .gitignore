@@ -1,0 +1,13 @@
+*.npy
+*.log
+*.png
+*/.DS_store
+*/.idea
+gitconfig
+*/__init__.py
+build
+*egg-info
+__pycache__
+build/*
+col_detect.egg-info/*
+*/col_detect.egg-info/*
