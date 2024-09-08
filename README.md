@@ -10,9 +10,11 @@ Safety is a critical issue for human-robot collaborative tasks, especially when 
 
 An important component of collision handling is collision detection and identification (CDI) which renders a classification problem between *accidental collision*, *intentional contact*, and *no contact* instances. Since collisions with robots can be measured by the torque sensors installed on their joints, CDI can be achieved by analyzing the torque sensor signals. **Fig. 1** shows three signal segments of the three instances as an example. It can be see that the waveforms of the signals of these three instances have different time and spectrum features which can be used as an evidence to achieve accurate classification.
 
+<p align="center">
 <img src="figs/segment_cls.svg" alt="Description" width="250">
 <img src="figs/segment_ctc.svg" alt="Description" width="250">
 <img src="figs/segment_fre.svg" alt="Description" width="250">
+</p>
 
 **Figure 1. The comparison of the joint torques between *collision*, *contact*, and *no contact*.**
 
@@ -51,14 +53,9 @@ Also, refer to the following public online dataset for the original sensor data 
     pip install .
     ```
 
-2. Train and validate ML models using grid search:
-    - Run the main script `example/main.py`;
-    - Watch the terminal for runtime information;
-    - The figures will show up at the end of running; They are also automatically saved in the root directory;
-    - The figures may impede each other; Drag the figures for a better view;
-    - Check out the logging file `INFO.log` for the runtime information.
+2. Train and validate ML models using grid search by running `grid_validate/xxx_validate.py` with `xxx` substituted with `knn`, `nn`, `rf`, and `svm` for the corresponding models.
 
-3. Train and test a ML model
+3. Train and test a ML model by running `train_and_test/offline_test.py` or `train_and_test/online_test.py`. Select which model to train or test in the scripts.
 
 ## License
 
